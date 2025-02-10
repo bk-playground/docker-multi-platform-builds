@@ -2,7 +2,7 @@ steps:
   - label: ":docker: build images amd"
     command: "mkdir -p bin/ && docker build -f Dockerfile --platform linux/amd64,linux/arm64 -output ./bin"
     artifact_paths:
-      - "bin/*"
+      - "./bin/linux/*"
     agents:
       queue: hosted-linux-amd
   # - label: ":docker: build images arm"
