@@ -1,5 +1,13 @@
 steps:
-  - label: ":docker: build images"
-    command: "docker build --platform linux/amd64,linux/arm64 -output ./bin ."
+  - label: ":docker: build images amd"
+    command: "docker build -output ./bin ."
     artifact_paths:
       - "bin/*"
+    agents:
+      queue: hosted-linux-amd
+  - label: ":docker: build images arm"
+    command: "docker build -output ./bin ."
+    artifact_paths:
+      - "bin/*"
+    agents:
+      queue: hosted-linux-arm
