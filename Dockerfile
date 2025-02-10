@@ -1,4 +1,4 @@
-FROM ubuntu:22.04 as base
+FROM ubuntu:22.04
 
 RUN <<BASH
 #!/usr/bin/env bash
@@ -82,5 +82,3 @@ apt clean all
 # Clean up apt cache
 rm -rf /var/lib/apt/lists/*
 BASH
-
-FROM base
