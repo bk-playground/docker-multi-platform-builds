@@ -1,0 +1,5 @@
+steps:
+  - label: ":docker: build images"
+    command: "docker build --platform linux/amd64,linux/arm64 -output ./bin ."
+    artifact_paths:
+      - "bin/*"
