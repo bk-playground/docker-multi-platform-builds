@@ -3,6 +3,10 @@ steps:
     command: "mkdir -p bin/ && docker build --platform linux/amd64,linux/arm64 --tag multarch-build ."
     agents:
       queue: hosted-linux-amd
+  - label: ":go: install"
+    command: ".buildkite/scripts/install-go.sh"
+    agents:
+      queue: hosted-linux-amd
   # - label: ":docker: build images arm"
   #   command: "mkdir -p bin/ && docker build -f Dockerfile -output ./bin"
   #   artifact_paths:
