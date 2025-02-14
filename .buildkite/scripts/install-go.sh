@@ -17,3 +17,4 @@ export PATH="/usr/local/go/bin:$PATH"
 
 printf "You are ready to Go!";
 go version
+go env
